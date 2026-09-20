@@ -5,26 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <title>Mi Experiencia WebAR - Romanito</title>
   
-  <!-- 1. Motor 3D de A-Frame (Versión estable) -->
+  <!-- 1. Cargamos el motor 3D de A-Frame en una versión altamente compatible -->
   <script src="https://cloudflare.com"></script>
   
-  <!-- 2. Motor AR.js oficial unificado y compatible con A-Frame 1.3.0 -->
+  <!-- 2. Cargamos exactamente la versión 3.4.5 de AR.js -->
   <script src="https://githack.com"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
 
-  <!-- Escena configurada correctamente con la webcam y texturas de video activas -->
+  <!-- Inicializamos la escena con la cámara web configurada -->
   <a-scene 
     embedded 
     arjs="sourceType: webcam; debugUIEnabled: false; videoTexture: true;"
     vr-mode-ui="enabled: false">
     
     <a-assets>
-      <!-- Archivo de tu amigurumi -->
+      <!-- Tu imagen de amigurumi perfectamente enlazada -->
       <img id="mi-imagen-cuadrada" src="romanito1.jpg">
     </a-assets>
 
-    <!-- Renderizamos el plano con tu foto a una distancia cómoda -->
+    <!-- Dibujamos tu foto en el aire (Tamaño 1.8x1.8 metros, a 2.5 metros frente a ti) -->
     <a-plane 
       src="#mi-imagen-cuadrada" 
       position="0 1.5 -2.5" 
@@ -34,7 +34,7 @@
       material="shader: flat; transparent: true;">
     </a-plane>
 
-    <!-- La cámara sincronizada con la webcam física -->
+    <!-- Punto de vista de la cámara -->
     
 
   </a-scene>
