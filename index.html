@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Experiencia WebAR - Cámara Real</title>
+  
+  <!-- Cargamos A-Frame básico -->
+  <script src="https://aframe.io"></script>
+  
+  <!-- Cargamos la extensión AR.js para activar la cámara de fondo -->
+  <script src="https://githack.com"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+
+  <!-- Inicializamos la escena indicando que la fuente de fondo es la webcam -->
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+    
+    <a-assets>
+      <!-- IMPORTANTE: Cambia "foto.jpg" por el nombre exacto de la imagen que ves en tu repositorio -->
+      <img id="mi-imagen-cuadrada" src="nano-banana-2_High-resolution_premium_studio_photography_of_a_meticulously_handcrafted_amiguru-1.jpg">
+    </a-assets>
+
+    <!-- Renderizamos la imagen en el espacio real de forma cuadrada (2x2) -->
+    <a-plane 
+      src="#mi-imagen-cuadrada" 
+      position="0 1.5 -3" 
+      rotation="0 0 0" 
+      width="2" 
+      height="2"
+      material="transparent: true; shader: flat;">
+    </a-plane>
+
+    <!-- La cámara del usuario sincronizada con la webcam real -->
+    
+
+  </a-scene>
+
+</body>
+</html>
